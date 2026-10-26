@@ -26,11 +26,6 @@ SQLAlchemy 2.0 · PostgreSQL · Docker · Telegram Bot API.
 | [llm-finetune-studio](https://github.com/nwl01234/llm-finetune-studio) | FastAPI, softmax/QLoRA-тренер, JS-дашборд | Платформа дообучения локальных LLM: живые loss-кривые, job runner |
 | [rag-docs-bot](https://github.com/nwl01234/rag-docs-bot) | FastAPI, TF-IDF RAG | Бот-ответчик по базе документов с цитированием источника, офлайн |
 
-## История проектов
-
-mini-crm (MVP) → orbit-crm (корпоративная CRM) → pulse-crm (React SPA + async backend)
-→ AI-проекты: cad-copilot · llm-finetune-studio · rag-docs-bot.
-
 ## Чем занимаюсь
 
 - Проектирование REST API и схем БД (SQLAlchemy 2.0, Alembic)
@@ -44,7 +39,7 @@ mini-crm (MVP) → orbit-crm (корпоративная CRM) → pulse-crm (Rea
 <img src="https://github-readme-stats.vercel.app/api?username=nwl01234&show_icons=true&theme=tokyonight&hide_border=false" width="47%" alt="stats"/>
 <img src="https://streak-stats.demolab.com?user=nwl01234&theme=tokyonight&hide_border=false" width="47%" alt="streak"/>
 
-## Навыки AI-инфраструктуры (из проанализированных вакансий hh.ru)
+## AI-инфраструктура: где реализовано
 
 | Навык | Где реализовано |
 |---|---|
