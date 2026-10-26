@@ -26,7 +26,7 @@ SQLAlchemy 2.0 · PostgreSQL · Docker · Telegram Bot API.
 | [llm-finetune-studio](https://github.com/nwl01234/llm-finetune-studio) | FastAPI, softmax/QLoRA-тренер, JS-дашборд | Платформа дообучения локальных LLM: живые loss-кривые, job runner |
 | [rag-docs-bot](https://github.com/nwl01234/rag-docs-bot) | FastAPI, TF-IDF RAG | Бот-ответчик по базе документов с цитированием источника, офлайн |
 
-## Эволюция
+## История проектов
 
 mini-crm (MVP) → orbit-crm (корпоративная CRM) → pulse-crm (React SPA + async backend)
 → AI-проекты: cad-copilot · llm-finetune-studio · rag-docs-bot.
@@ -43,3 +43,19 @@ mini-crm (MVP) → orbit-crm (корпоративная CRM) → pulse-crm (Rea
 
 <img src="https://github-readme-stats.vercel.app/api?username=nwl01234&show_icons=true&theme=tokyonight&hide_border=false" width="47%" alt="stats"/>
 <img src="https://streak-stats.demolab.com?user=nwl01234&theme=tokyonight&hide_border=false" width="47%" alt="streak"/>
+
+## Навыки AI-инфраструктуры (из проанализированных вакансий hh.ru)
+
+| Навык | Где реализовано |
+|---|---|
+| Fine tuning (локальные модели) | llm-finetune-studio (softmax→QLoRA), cad-copilot (finetune.py) |
+| Оценка качества LLM (LLM-as-a-judge, golden set) | llm-finetune-studio `app/eval.py`, rag-docs-bot `core/eval.py` |
+| RAG | rag-docs-bot (TF-IDF + цитирование), orbit-crm (AI-ассистент) |
+| Online/offline метрики + регресс-тестирование | llm-finetune-studio (loss/accuracy по эпохам, run-diff), rag-docs-bot (hit-rate@3 отчёт) |
+| A/B-тестирование (offline) | rag-docs-bot (`/api/eval`: синонимы vs plain) |
+| Качество данных + авто-разметка (consistency) | cad-copilot `core/qa.py` (honeypots), llm-finetune-studio (conflict-детекция) |
+| Data lifecycle (сбор → разметка → обучение → eval) | cad-copilot `core/qa.py: eval_trained_model()` — полный цикл |
+| Python, SQL, REST API | backend всех проектов (FastAPI, SQLAlchemy 2.0) |
+| React/TypeScript | pulse-crm (SPA), business-flow-automator (дашборд) |
+| Telegram Bot API | orbit-crm, mini-crm, business-flow-automator (aiogram 3) |
+| CI / деплой | GitHub Actions во всех репо, Docker (business-flow-automator) |
