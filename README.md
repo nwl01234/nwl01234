@@ -33,7 +33,7 @@
 
 ### 2. [orbit-crm](https://github.com/nwl01234/orbit-crm) — корпоративная CRM с AI-ассистентом
 
-![CRM](https://raw.githubusercontent.com/nwl01234/orbit-crm/main/skrin/1.png)
+![CRM](https://raw.githubusercontent.com/nwl01234/orbit-crm/main/skrin/2.png)
 
 **Проблема:** заявки, клиенты и история общения — в таблицах и головах менеджеров;
 нужен контроль: кто, что и когда сделал.
