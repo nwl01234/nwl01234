@@ -1,10 +1,10 @@
-# Разработчик с AI-усилением: автоматизация бизнес-процессов и внутренние инструменты
+# Python Backend
+### Автоматизация · CRM · Telegram · Дашборды
 
-**[🔥 Сайт-портфолио с демо и скринами](https://nwl01234.github.io/portfolio/)** — все проекты, реальные скриншоты и инструкция демо-запуска.
+Портфолио: https://nwl01234.github.io/portfolio/
 
-Собираю рабочие инструменты для бизнеса: заявки, остатки, роли, аудит,
-уведомления, дашборды, Telegram-боты. Использую AI как ускоритель разработки,
-но отвечаю за архитектуру, код, тесты и результат.
+Собираю рабочие системы: заявки, остатки, роли, аудит, уведомления,
+real-time дашборды. Архитектуру, код, тесты и результат держу на себе.
 
 ## Что я делаю лучше всего
 
@@ -74,7 +74,7 @@ Telegram-бот с AI-консультантом: сценарий покупк�
 
 ## Как я использую AI в разработке
 
-- **Как ускоритель:** Cursor, Claude Code, Codex — черновики кода, рефакторинг, тесты. Финальная архитектура, код-ревью, тесты и деплой — за мной.
+- **Как ускоритель:** черновики кода, рефакторинг, тесты — основа готовится быстрее, проверка и подпись за мной.
 - **В продуктах:** ассистент по базе знаний (RAG с цитатами), AI-консультант магазина, классификация обращений.
 - **Без магии:** если AI не улучшает метрику задачи — не тащу его в проект.
 
@@ -84,13 +84,13 @@ Telegram-бот с AI-консультантом: сценарий покупк�
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy_2-D71F00)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
-![React](https://img.shields.io/badge/React_18-20232A?logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?logo=tailwindcss&logoColor=white)
 ![aiogram](https://img.shields.io/badge/aiogram_3-26A5E4?logo=telegram&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![GitHub_Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-0A9EDC)
+![JWT_RRBAC](https://img.shields.io/badge/JWT%2FRBAC-6C8CFF)
+![Git](https://img.shields.io/badge/Git-F05033?logo=git&logoColor=white)
+
+Сильные плюсы: React + TypeScript, WebSocket, RAG, автоматизация бизнес-процессов,
+CRM, REST API, audit log, pytest, APScheduler, Google Sheets API
 
 ## Контакты
 
