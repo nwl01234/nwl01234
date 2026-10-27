@@ -53,7 +53,7 @@
 **Сделано:** статическая витрина на GitHub Pages (0 ₽ за инфраструктуру) +
 Telegram-бот с AI-консультантом: сценарий покупки, журнал продаж через GitHub API.
 
-**Результат:** работает витрина → [nwl01234.github.io/autoshop](https://nwl01234.github.io/autoshop/)
+**Результат:** витрина и корзина работают без бэкенда; заказ уходит в Telegram-бот.
 
 ![Витрина](https://raw.githubusercontent.com/nwl01234/autoshop/main/skrin/1.png)
 
