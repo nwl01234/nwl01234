@@ -1,8 +1,8 @@
 # Fullstack Developer · React/TypeScript · API · PostgreSQL
 
 Собираю рабочие системы целиком: API, UI, роли, audit, realtime, Docker.
-Основной продуктовый кейс — заявки и остатки: FastAPI + React/TS, транзакция списания,
-RBAC и WebSocket. Есть Node/Hono mirror ключевого потока на TypeScript.
+Главный кейс — заявки и остатки.
+Есть Node/Hono mirror ключевого потока на TypeScript.
 
 Сайт-портфолио: https://nwl01234.github.io/portfolio/
 
@@ -23,13 +23,12 @@ Fullstack CRM: React 18 + TypeScript SPA, async FastAPI, SQLAlchemy 2.0, Alembic
 
 ## Stack
 
-TypeScript, React, PostgreSQL, Docker, JWT, WebSocket, REST, FastAPI, Node/Hono,
+TypeScript, React, PostgreSQL, Docker, JWT, WebSocket, REST, Node/Hono, FastAPI,
 SQLAlchemy 2, pytest, Alembic, aiogram 3.
 
 ## AI в разработке
 
-Cursor / Claude Code / Codex — ускоритель черновиков и ревью. Архитектура, проверка
-edge-cases, тесты и ответственность за деплой — на мне.
+Cursor / Claude Code / Codex — ускорение; review и ответственность за мной.
 
 ## Контакты
 
