@@ -1,98 +1,38 @@
-# Python Backend
-### Автоматизация · CRM · Telegram · Дашборды
+# Fullstack Developer · React/TypeScript · API · PostgreSQL
 
-Портфолио: https://nwl01234.github.io/portfolio/
+Собираю рабочие системы целиком: API, UI, роли, audit, realtime, Docker.
+Основной продуктовый кейс — заявки и остатки: FastAPI + React/TS, транзакция списания,
+RBAC и WebSocket. Есть Node/Hono mirror ключевого потока на TypeScript.
 
-Собираю рабочие системы: заявки, остатки, роли, аудит, уведомления,
-real-time дашборды. Архитектуру, код, тесты и результат держу на себе.
+Сайт-портфолио: https://nwl01234.github.io/portfolio/
 
-## Что я делаю лучше всего
+## Selected projects
 
-- Автоматизация бизнес-процессов: заявки, остатки, уведомления, отчёты (Telegram, Google Sheets, APScheduler)
-- CRM и внутренние сервисы: роли и права, JWT, аудит действий, миграции
-- Real-time дашборды: React + Chart.js, WebSocket
-- Telegram-боты (aiogram 3): приём заказов, отчёты, AI-консультант
-- LLM в продуктах, где есть польза: ассистент по базе знаний с цитатами источников, консультант витрины
+### [business-flow-automator](https://github.com/nwl01234/business-flow-automator)
+Заявки и остатки: Python/FastAPI + React/TS, JWT-роли, транзакционное списание,
+append-only audit, WebSocket после commit, Docker Compose.
+12 pytest. Демо: `docker compose up` → `admin / admin123`.
 
-## Избранные кейсы
+### [node-service](https://github.com/nwl01234/business-flow-automator/tree/main/node-service)
+Тот же доменный поток на TypeScript + Hono: login/orders/confirm/cancel/audit,
+JWT/RBAC, Zod, идемпотентный confirm, 3 теста на `node:test`.
+Не второй backend — доказательство переноса правил между runtime.
 
-### 1. [business-flow-automator](https://github.com/nwl01234/business-flow-automator) — автозаявки и остатки
+### [pulse-crm](https://github.com/nwl01234/pulse-crm)
+Fullstack CRM: React 18 + TypeScript SPA, async FastAPI, SQLAlchemy 2.0, Alembic, JWT.
 
-**Проблема:** заявки приходят в чаты и на почту, остатки живут в Google Sheets,
-никто не знает, кто и что списал.
+## Stack
 
-**Сделано:** Telegram-бот и веб-форма → единая база заявок; проверка и списание
-остатков; журнал операций; роли (admin/manager/bot); WebSocket-дашборд в реальном
-времени; дневные отчёты и алерты по низким остаткам.
+TypeScript, React, PostgreSQL, Docker, JWT, WebSocket, REST, FastAPI, Node/Hono,
+SQLAlchemy 2, pytest, Alembic, aiogram 3.
 
-**Результат:** заявка → списание → уведомление → запись в журнале без человека-диспетчера.
+## AI в разработке
 
-**Стек:** FastAPI, SQLAlchemy 2, PostgreSQL/SQLite, React + Tailwind + Chart.js, WebSocket, aiogram 3, APScheduler, Docker
-
-**Демо:** локальный запуск одной командой, демо-данные и доступы создаются автоматически (`admin / admin123`) — [инструкция](https://github.com/nwl01234/business-flow-automator#демо-за-2-минуты)
-
-![Дашборд](https://raw.githubusercontent.com/nwl01234/business-flow-automator/main/skrin/1.png)
-
-### 2. [orbit-crm](https://github.com/nwl01234/orbit-crm) — корпоративная CRM с AI-ассистентом
-
-![CRM](https://raw.githubusercontent.com/nwl01234/orbit-crm/main/skrin/2.png)
-
-**Проблема:** заявки, клиенты и история общения — в таблицах и головах менеджеров;
-нужен контроль: кто, что и когда сделал.
-
-**Сделано:** CRM полного цикла — сделки/заявки, RBAC-роли, JWT, аудит всех
-действий, AI-ассистент по внутренним данным (RAG), Telegram-бот, rate-limit.
-
-**Результат:** менеджер видит всю историю по клиенту; руководитель — кто и что
-делал; AI-ассистент отвечает по базе, без выхода данных наружу.
-
-**Стек:** FastAPI, SQLAlchemy, Jinja2 + Tailwind + Alpine.js, Telegram-бот
-
-### 3. [autoshop](https://github.com/nwl01234/autoshop) — витрина магазина с AI-консультантом
-
-**Проблема:** показать товары и принять заявку без сайта, хостинга и бэкенда.
-
-**Сделано:** статическая витрина на GitHub Pages (0 ₽ за инфраструктуру) +
-Telegram-бот с AI-консультантом: сценарий покупки, журнал продаж через GitHub API.
-
-**Результат:** витрина и корзина работают без бэкенда; заказ уходит в Telegram-бот.
-
-![Витрина](https://raw.githubusercontent.com/nwl01234/autoshop/main/skrin/1.png)
-
-### 4. [rag-docs-bot](https://github.com/nwl01234/rag-docs-bot) — бот-ответчик по базе документов
-
-**Проблема:** HR и IT отвечают на одни и те же вопросы сотрудников каждый день;
-облачные чаты на внутренних документах использовать нельзя.
-
-**Сделано:** загрузил `.md`-документы — получил бота: ответы только из базы,
-каждый ответ со ссылкой на документ-источник; нет ответа — честно говорит,
-не выдумывает; встроенная метрика качества (golden-набор, hit-rate@3).
-
-**Результат:** офлайн, без API-ключей, за 2 минуты под любую компанию.
-
-**Быстрый старт:** `pip install -r requirements.txt && uvicorn app:app --port 8095`
-
-## Как я использую AI в разработке
-
-- **Как ускоритель:** черновики кода, рефакторинг, тесты — основа готовится быстрее, проверка и подпись за мной.
-- **В продуктах:** ассистент по базе знаний (RAG с цитатами), AI-консультант магазина, классификация обращений.
-- **Без магии:** если AI не улучшает метрику задачи — не тащу его в проект.
-
-## Навыки
-
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy_2-D71F00)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
-![aiogram](https://img.shields.io/badge/aiogram_3-26A5E4?logo=telegram&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![JWT_RRBAC](https://img.shields.io/badge/JWT%2FRBAC-6C8CFF)
-![Git](https://img.shields.io/badge/Git-F05033?logo=git&logoColor=white)
-
-Сильные плюсы: React + TypeScript, WebSocket, RAG, автоматизация бизнес-процессов,
-CRM, REST API, audit log, pytest, APScheduler, Google Sheets API
+Cursor / Claude Code / Codex — ускоритель черновиков и ревью. Архитектура, проверка
+edge-cases, тесты и ответственность за деплой — на мне.
 
 ## Контакты
 
-Telegram и телефон — в резюме на hh.ru. Код выше — открыт, вопросы по любому
-кейсу отвечу в отклике или на собеседовании.
+- GitHub: https://github.com/nwl01234
+- Портфолио: https://nwl01234.github.io/portfolio/
+- Резюме и отклики: hh.ru
