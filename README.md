@@ -17,7 +17,8 @@ Tesseract, documents (PDF + MinIO/S3) и outbox-worker.
 - Redis rate limit, RBAC + object-level scope, идемпотентные переходы, append-only audit;
 - PostgreSQL + Drizzle, transactional outbox, JetStream durable consumer, DLQ + replay;
 - PDF-акт по карте с записью в MinIO/S3;
-- 22 API + 5 web + 5 notifications + 4 OCR теста, typecheck и production build.
+- 22 API + 5 web + 5 notifications + 4 OCR теста, typecheck и production build;
+- Prometheus/Grafana SLO dashboard и k6: p95 18.9 ms, 0 ошибок.
 
 Запуск без Docker: `start-demo.bat` → `admin / admin123`.
 
